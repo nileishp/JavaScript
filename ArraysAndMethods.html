@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+	<head>
+		<title>Arrays and methods</title>
+	</head>
+	
+	<body style="margin: 20px;">
+		<h2> Arrays and methods </h2>
+		
+		<p> Arrays used to stored multiple values in single variable.</p>
+		<p style="margin: 20px;"> Following are the list of string Arrays.</p>
+		<p id= "strArr" style="margin: 20px;"></p>
+		
+		<h3 > Arrays Sorting </h3>
+		<p id= "arrSort" style="margin: 20px;"></p>
+		
+		<h3> Arrays Sorting in Reverse Order</h3>
+		<p id= "arrRev" style="margin: 20px;"></p>
+		
+		<h3> Arrays to String (Convert arrays to String sapareded by commas).</h3>
+		<p id= "arrToStr" style="margin: 20px;"></p>
+		
+		<h3> Arrays Join(works like toString with spacify the saparator as arg).</h3>
+		<p id= "arrJoin" style="margin: 20px;"></p>
+		
+		<h3> Arrays valueOf(it return arrays itself).</h3>
+		<p id= "valueof" style="margin: 20px;"></p>
+		
+		<h3> Arrays slice().</h3>
+		<p id= "slice" style="margin: 20px;"></p>
+		
+		
+		<script type="text/javascript">
+		
+			var fruits = [ "Pineapple", "Apple", "Mango", "Kivi", "Orenge"];
+			document.getElementById("strArr").innerHTML = fruits;
+			
+			fruits.sort();
+			document.getElementById("arrSort").innerHTML = fruits;
+			
+			fruits.reverse();
+			document.getElementById("arrRev").innerHTML = fruits;
+			
+			fruits.toString();
+			document.getElementById("arrToStr").innerHTML = fruits;
+			
+			//fruits.join(" * ");
+			document.getElementById("arrJoin").innerHTML = fruits.join(" - ");
+			
+			document.getElementById("valueof").innerHTML = fruits.valueOf();
+			
+			document.getElementById("slice").innerHTML = fruits.slice(3,5);
+		</script>
+	</body>
+
+</html>
