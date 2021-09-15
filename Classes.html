@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<head>
+		<title> JS Classes</title>
+		
+		
+	</head>
+	
+	<body>
+		
+		<h2> Classes and methods.</h2>
+		
+		 <p > Class is a type of Funtion .<br> Class defined by using keyword <b>class</b>. <br> Properties are define with the help of special method colled Constuctor().</p> 
+		<p id="class"></p>
+		<h2> extends</h2>
+		
+		<p>A class created with a class inheritance inherits all the methods from another class.</p>
+		<p id="clsExtends"></p>
+		
+		<script type="text/javascript">
+		
+			class Student {
+				constructor(name){
+					this.firstName = name;
+				}
+				
+				present(){
+					return " My name is "+ this.firstName;
+				}
+			}
+			i = new Student("ABC");
+			document.getElementById("class").innerHTML = i.firstName;
+			
+			class marks extends Student{
+				constructor(name,mark){
+					super(name);
+					this.mark = mark;
+				}
+				
+				show(){
+					return this.present() + ", and I got " + this.mark +" marks";
+				}
+			}
+			
+			S1 = new marks("XYX", 78);
+			document.getElementById("clsExtends").innerHTML = S1.show();
+			
+		</script>
+		
+	</body>
+</html>
